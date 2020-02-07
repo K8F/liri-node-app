@@ -1,11 +1,11 @@
 require("dotenv").config();
 
 //packages
-var fs=require("fs")
+var fs = require("fs")
 var keys = require("./keys.js");
 var axios = require("axios");
-var moment=require("moment");
-var Spotify =require("node-spotify-api");
+var moment = require("moment");
+var Spotify = require("node-spotify-api");
 var spotify = new Spotify(keys.spotify);
 
 //variable to read the command
@@ -16,7 +16,8 @@ var input = "";
 var nodeArgs = process.argv;
 
 //needed to run axios
-
+var inputv1 = process.argv.slice(3).join(" ")   // array to string 
+console.log(inputv1)
 
 //for loop that readys input for API string. 
 for (var i = 3; i < nodeArgs.length; i++) {
@@ -31,27 +32,30 @@ for (var i = 3; i < nodeArgs.length; i++) {
 }
 
 //console.log(command,input);
+menubar(command)
 
 //switch that runs function when a certain command is used
-switch (command) {
-  case "concert-this":
-    concertThis();
-    break;
+function menubar() {
 
-  case "spotify-this-song":
-    spotifyThis();
-    break;
+  switch (command) {
+    case "concert-this":
+      concertThis();
+      break;
 
-  case "movie-this":
-    movieThis();
-    break;
+    case "spotify-this-song":
+      spotifyThis();
+      break;
 
-  case "do-what-it-says":
-    doWhatItSays()
-    break;
+    case "movie-this":
+      movieThis();
+      break;
 
+    case "do-what-it-says":
+      doWhatItSays()
+      break;
+
+  }
 }
-
 
 
 //take in the following commands: 
@@ -63,19 +67,23 @@ switch (command) {
 //return: Name of venue, venue locatiion, dates of even (moment MM/DD/YYYY)
 
 function concertThis() {
-  var queryURL = "https://rest.bandisintown.com/artists/" + input + "/events?app_id=codingbootcamp";
+  var queryURL = "https://rest.bandsintown.com/artists/" + input + "/events?app_id=codingbootcamp";
   console.log(queryURL)
   axios.get(queryURL).then(
-    function (response) { for (var i = 0; i < response.data.length; i++) {
-      console.log("======================================")
 
-      //console.log("Venue Name: "+ response.data[i].venue.name);
-      //console.log("Venue Location: " + response.data[i].venue.city + ", " + response.data[i].venue.country);
-      //console.log("Date of the Event: " + moment(response.data[i].datetime).format("L"));
-  
-      
-      console.log("======================================")
-    }
+    function (response) {
+      //if there is no event add feedback()
+
+      for (var i = 0; i < response.data.length; i++) {
+        console.log("======================================")
+        // console.log(response);
+        console.log("Venue Name: " + response.data[i].venue.name);
+        console.log("Venue Location: " + response.data[i].venue.city + ", " + response.data[i].venue.country);
+        console.log("Date of the Event: " + moment(response.data[i].datetime).format("L"));
+
+
+        console.log("======================================")
+      }
 
     })
 }
@@ -86,14 +94,14 @@ function concertThis() {
 //input: 'node liri.js spotify-this-song '<song name>'
 //return: artist, song name, preview link to spotify, album
 //if no song is provided, program returns: "The Sign" by Ace of Base.
-function spotifyThis(){
-   // Catch empty input
-   if (!input) {
+function spotifyThis() {
+  // Catch empty input
+  if (!input) {
     input = "The Sign Ace of Base";
-}
-spotify.search({type: "track", query: input}, function(err, data) {
+  }
+  spotify.search({ type: "track", query: input }, function (err, data) {
     if (err) {
-        logThis(err);
+      logThis(err);
     }
 
     var userSong = data.tracks.items;
@@ -107,7 +115,7 @@ spotify.search({type: "track", query: input}, function(err, data) {
 
     console.log("======================================")
 
-});
+  });
 }
 
 
@@ -120,8 +128,8 @@ spotify.search({type: "track", query: input}, function(err, data) {
 
 function movieThis() {
 
-  if(!input){
-    input="Mr. Nobody";
+  if (!input) {
+    input = "Mr. Nobody";
     console.log("If you haven't watched 'Mr. Nobody,' then you should: <http://www.imdb.com/title/tt0485947/>");
     console.log("It's on Netflix!");
   }
@@ -164,13 +172,21 @@ function movieThis() {
     });
 }
 
-  //do-what-it-says
-    //use fsvar fs = require("fs");
-    //pulls from random.txt: runs spotify-this song for "i want it that way"
+//do-what-it-says
+//use fsvar fs = require("fs");
+//pulls from random.txt: runs spotify-this song for "i want it that way"
 
-function doWhatItSays(){
-  fs.readFile('random.txt', 'utf8', function(error, data){
-    
+function doWhatItSays() {
+  fs.readFile('random.txt', 'utf8', function (error, data) {
+    console.log(data);
+    var str = data.split("|");
+    console.log(str);
+    command = str[0]
+    input = str[1]
+    menubar()
+
+
+  });
 }
 
   // If the code experiences any errors it will log the error to the console.
