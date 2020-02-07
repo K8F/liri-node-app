@@ -14,6 +14,8 @@ var input="";
 //stores arguments in array;
 var nodeArgs=process.argv;
 
+var axios = require("axios");
+
 
 //for loop that readys input for API string. 
 for (var i = 3; i < nodeArgs.length; i++) {
@@ -29,9 +31,25 @@ for (var i = 3; i < nodeArgs.length; i++) {
 
 //console.log(command,input);
 
+//switch that runs function when a certain command is used
+switch(command){
+  case "concert-this":
+    //function;
+    break;
 
+  case "spotify-this-song":
+    //function;
+    break;
+  
+  case "movie-this":
+      movieThis();
+      break;
 
-//this needs to be written so that an entire string can be picked up
+  case "do-what-it-says":
+    //function
+    break;
+    
+}
 
 
 
@@ -57,9 +75,8 @@ for (var i = 3; i < nodeArgs.length; i++) {
     //input: node.liri.js movie-this 'movie name'
     //return: title, year, imdb rating, rotten tomatoes rating, country, language, plot, actors
     //if no movie is probided, return "mr nobody"
-if (command="movie-this"){
-    var axios = require("axios");
-    //put this in a function {movieThis()}
+
+    function movieThis(){
     var queryURL = "http://www.omdbapi.com/?t=" + input + "&y=&plot=short&apikey=trilogy";
 
     //console.log(queryURL)
