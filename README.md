@@ -23,7 +23,7 @@ To set up LIRI:
     * OMDB
     * BandsInTown
     
-1. Clone the repository that includes this README: https://github.com/K8F/liri-node-app. 
+1. Clone the repository that includes this README: https://github.com/K8F/liri-node-app.git. 
 1. Run npm install. The following packages should install: 
 
     * Node-Spotify-API
@@ -31,7 +31,8 @@ To set up LIRI:
     * Moment
     * DotEnv
     
-    1. Create a .env file in the same directory. Add your API keys using the following format: 
+1. Create a .env file in the same directory. Add your API keys using the following format: 
+
         '# Spotify API keys'
         'SPOTIFY_ID=your-spotify-ID'
         'SPOTIFY_SECRET=your-spotify-secret'
@@ -43,6 +44,53 @@ To set up LIRI:
         '# OMDB API keys'
         'OMDB_API_KEY=your-api-key'
         
+You should now be able to run the available commands in LIRI. 
+
+## Using LIRI
+
+LIRI has 4 commands: 
+
+1. **concert-this**:  Retrieves upcoming concerts and music venues for an artist. 
+1. **spotify-this-song**: Retrieves information on a song, including the artist, a preview link, and the album.
+1. **movie-this**: Retrieves information on a movie, including when it came out, movie ratings, the country the movie was produced, the language it's in, the  plot, and the actors. 
+1. **do-what-it-says**: Retrieves information from a text file. Run it and see what happens!
+
+To run a command in LIRI: 
+1. Check that you are in the root of the directory.  You can use `ls` to see the files in your current directory. You should see one called liri-node-app.js. 
+2. If you don't see the liri-node-app.js file, `cd` to the appropriate directory.
+3. To run a command, use the following syntax: 
+    
+    * `node liri-node-app.js <LIRI Command> <search-input>`
+    
+Try it out by running the `concert-this` command to see upcoming concerts for Lizzo: 
+
+    `node liri-node-app.js concert-this lizzo`
+ 
+Now try the `spotify-this-song` command to retrieve information on Frank Ocean's song, "Pink & White":
+
+    `node liri-node-app.js spotify-this-song pink & white`
+
+Next, try `movie-this` to get info on the movie, the lobster: 
+
+    `node liri-node-app.js movie this the lobster`
+
+Finally, see what happens when you run `do-what-it-says`:
+
+    `node liri-node-app.js do-what-it-says`
+
+
+Now try out the commands for yourself. Remember to use the correct search input relative to the command; 
+
+* For `concert-this`, enter an artist or band name.
+* For `spotify-this-song`, enter a song name.
+* For `movie-this`, enter a movie name.
+
+To see the LIRI in action, watch the video included in this repo: 
+
+![LIRI Bot Movie](liri-node-movie.mov)
+
+
+
 
         
 
