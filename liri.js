@@ -16,8 +16,8 @@ var input = "";
 var nodeArgs = process.argv;
 
 //needed to run axios
-var inputv1 = process.argv.slice(3).join(" ")   // array to string 
-console.log(inputv1)
+//var inputv1 = process.argv.slice(3).join(" ")   // array to string 
+//console.log(inputv1)
 
 //for loop that readys input for API string. 
 for (var i = 3; i < nodeArgs.length; i++) {
@@ -67,20 +67,17 @@ function menubar() {
 //return: Name of venue, venue locatiion, dates of even (moment MM/DD/YYYY)
 
 function concertThis() {
-  var queryURL = "https://rest.bandsintown.com/artists/" + input + "/events?app_id=codingbootcamp";
-  console.log(queryURL)
+  var queryURL = "https://rest.bandsintown.com/artists/" + input + "/events?app_id=" +keys.bands.id;
+  //console.log(queryURL)
   axios.get(queryURL).then(
 
     function (response) {
-      //if there is no event add feedback()
-
       for (var i = 0; i < response.data.length; i++) {
         console.log("======================================")
-        // console.log(response);
+
         console.log("Venue Name: " + response.data[i].venue.name);
         console.log("Venue Location: " + response.data[i].venue.city + ", " + response.data[i].venue.country);
         console.log("Date of the Event: " + moment(response.data[i].datetime).format("L"));
-
 
         console.log("======================================")
       }
@@ -135,11 +132,12 @@ function movieThis() {
   }
   var queryURL = "http://www.omdbapi.com/?t=" + input + "&y=&plot=short&apikey=" + keys.movies.id;
 
-  console.log(queryURL)
+  //console.log(queryURL)
 
   axios.get(queryURL).then(
     function (response) {
       console.log("======================================")
+
       console.log("Title: " + response.data.Title);
       console.log("Release Year: " + response.data.Year);
       console.log("IMDB Rating: " + response.data.imdbRating);
@@ -148,6 +146,7 @@ function movieThis() {
       console.log("Language(s): " + response.data.Language);
       console.log("Plot: " + response.data.Plot);
       console.log("Actors: " + response.data.Actors);
+      
       console.log("======================================")
     })
     .catch(function (error) {
@@ -173,14 +172,13 @@ function movieThis() {
 }
 
 //do-what-it-says
-//use fsvar fs = require("fs");
 //pulls from random.txt: runs spotify-this song for "i want it that way"
 
 function doWhatItSays() {
   fs.readFile('random.txt', 'utf8', function (error, data) {
-    console.log(data);
-    var str = data.split("|");
-    console.log(str);
+    //console.log(data);
+    var str = data.split(",");
+    //console.log(str);
     command = str[0]
     input = str[1]
     menubar()
@@ -188,19 +186,3 @@ function doWhatItSays() {
 
   });
 }
-
-  // If the code experiences any errors it will log the error to the console.
-  //if (error) {
-    //return console.log(error);
-  //}
-
-  // We will then print the contents of data
-  //console.log(data);
-
-  // Then split it by commas (to make it more readable)
-  //var dataArr = data.split(",");
-
-  // We will then re-display the content as an array for later use.
-  //console.log(dataArr);
-
-//});
