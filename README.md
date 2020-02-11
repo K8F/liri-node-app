@@ -96,11 +96,13 @@ Now try out the commands for yourself. Remember to use the correct search input 
 * For `spotify-this-song`, enter a song name.
 * For `movie-this`, enter a movie name.
 
+
 ## Extra Notes
 
 This assignment asked for placeholders for both the `movie-this` and the `spotify-this-song` commands. These gifs demonstrate what happens when a user does not include a search input. 
 
-* ![spotify-empty](gifs/spotify-empty.gif)
+![spotify-empty](gifs/spotify-empty.gif)
+
 ![movie-empty](gifs/movie-empty.gif)
 
 
