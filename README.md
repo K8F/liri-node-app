@@ -2,7 +2,7 @@
 
 ## Introduction
 
-LIRI is node.js application that works kind of  like Apple's SIRI. Instead of Speech Interpretation and Recognition Interface, LIRI is a Language Interpreation and Recognition Interface. In other words, LIRI works when users enter text commands via terminal. With LIRI, you can: 
+LIRI is a node.js application that works kind of  like Apple's SIRI. Instead of Speech Interpretation and Recognition Interface, LIRI is a Language Interpreation and Recognition Interface. LIRI works when users enter text commands via terminal. With LIRI, you can: 
 
 * Search for upcoming concerts for an artist
 * Find a song on spotify
