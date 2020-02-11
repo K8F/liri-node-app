@@ -66,28 +66,28 @@ Try it out by running the `concert-this` command to see upcoming concerts for Li
 
     `node liri.js concert-this lizzo`
 
-![concert-this](concert-this.gif)
+![concert-this](gifs/concert-this.gif)
 
  
 Now try the `spotify-this-song` command to retrieve information on Frank Ocean's song, "Pink & White":
 
     `node liri.js spotify-this-song misery business`
     
-![spotify-this-song](spotify-this-song.gif)
+![spotify-this-song](gifs/spotify-this-song.gif)
 
     
 Next, try `movie-this` to get info on the movie, the lobster: 
 
     `node liri.js movie this the lobster`
 
-![movie-this](movie-this.gif)
+![movie-this](gifs/movie-this.gif)
 
 
 Finally, see what happens when you run `do-what-it-says`:
 
     `node liri.js do-what-it-says`
 
-![do-what-it-says](do-what-it-says.gif)
+![do-what-it-says](gifs/do-what-it-says.gif)
 
 
 
