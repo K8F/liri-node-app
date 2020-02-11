@@ -2,12 +2,12 @@
 
 ## Introduction
 
-LIRI is node.js application that works kind of like like Apple's SIRI. Instead of Speech Interpretation and Recognition Interface, LIRI is a Language Interpreation and Recognition Interface. In other words, LIRI works when users enter text commands via terminal. With LIRI, you can: 
+LIRI is node.js application that works kind of  like Apple's SIRI. Instead of Speech Interpretation and Recognition Interface, LIRI is a Language Interpreation and Recognition Interface. In other words, LIRI works when users enter text commands via terminal. With LIRI, you can: 
 
 * Search for upcoming concerts for an artist
 * Find a song on spotify
 * Find information about a movie
-* Run a  command with surprise results
+* Run a command with surprise results
 
 Read this document to learn how to start using LIRI. 
 
@@ -36,7 +36,6 @@ To set up LIRI:
         '# Spotify API keys'
         'SPOTIFY_ID=your-spotify-ID'
         'SPOTIFY_SECRET=your-spotify-secret'
-        
 
        ' # Band API keys'
         'BANDSINTOWN_API_KEY=your-api-key'
@@ -71,14 +70,14 @@ Try it out by running the `concert-this` command to see upcoming concerts for Li
 ![concert-this](gifs/concert-this.gif)
 
  
-Now try the `spotify-this-song` command to retrieve information on Frank Ocean's song, "Pink & White":
+Now try the `spotify-this-song` command to retrieve information on Paramore's song, "Misery Business":
 
     `node liri.js spotify-this-song misery business`
     
 ![spotify-this-song](gifs/spotify-this-song.gif)
 
     
-Next, try `movie-this` to get info on the movie, the lobster: 
+Next, try `movie-this` to get info on the movie, *The Lobster*: 
 
     `node liri.js movie this the lobster`
 
@@ -91,8 +90,7 @@ Finally, see what happens when you run `do-what-it-says`:
 
 ![do-what-it-says](gifs/do-what-it-says.gif)
 
-
-Now try out the commands for yourself. Remember to use the correct search input relative to the command; 
+Now try out the commands for yourself. Remember to use the correct search input for each command: 
 
 * For `concert-this`, enter an artist or band name.
 * For `spotify-this-song`, enter a song name.
@@ -101,7 +99,7 @@ Now try out the commands for yourself. Remember to use the correct search input 
 
 ## Extra Notes
 
-This assignment asked for placeholders for both the `movie-this` and the `spotify-this-song` commands. These gifs demonstrate what happens when a user does not include a search input. 
+This assignment asked for placeholders for both the `movie-this` and the `spotify-this-song` commands. These gifs demonstrate what happens when a user does not include a search input with these commands. 
 
 ![spotify-empty](gifs/spotify-empty.gif)
 
