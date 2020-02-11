@@ -56,27 +56,39 @@ LIRI has 4 commands:
 1. **do-what-it-says**: Retrieves information from a text file. Run it and see what happens!
 
 To run a command in LIRI: 
-1. Check that you are in the root of the directory.  You can use `ls` to see the files in your current directory. You should see one called liri-node-app.js. 
-2. If you don't see the liri-node-app.js file, `cd` to the appropriate directory.
+1. Check that you are in the root of the directory.  You can use `ls` to see the files in your current directory. You should see one called liri.js. 
+2. If you don't see the liri.js file, `cd` to the appropriate directory.
 3. To run a command, use the following syntax: 
     
-    * `node liri-node-app.js <LIRI Command> <search-input>`
+    * `node liri.js <LIRI Command> <search-input>`
     
 Try it out by running the `concert-this` command to see upcoming concerts for Lizzo: 
 
-    `node liri-node-app.js concert-this lizzo`
+    `node liri.js concert-this lizzo`
+
+![concert-this](concert-this.gif)
+
  
 Now try the `spotify-this-song` command to retrieve information on Frank Ocean's song, "Pink & White":
 
-    `node liri-node-app.js spotify-this-song pink & white`
+    `node liri.js spotify-this-song misery business`
+    
+![spotify-this-song](spotify-this-song.gif)
 
+    
 Next, try `movie-this` to get info on the movie, the lobster: 
 
-    `node liri-node-app.js movie this the lobster`
+    `node liri.js movie this the lobster`
+
+![movie-this](movie-this.gif)
+
 
 Finally, see what happens when you run `do-what-it-says`:
 
-    `node liri-node-app.js do-what-it-says`
+    `node liri.js do-what-it-says`
+
+![do-what-it-says](do-what-it-says.gif)
+
 
 
 Now try out the commands for yourself. Remember to use the correct search input relative to the command; 
@@ -86,8 +98,6 @@ Now try out the commands for yourself. Remember to use the correct search input 
 * For `movie-this`, enter a movie name.
 
 To see the LIRI in action, watch the video included in this repo: 
-
-![LIRI Bot Movie](liri-node-movie.mov)
 
 
 
