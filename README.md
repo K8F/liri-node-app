@@ -2,12 +2,12 @@
 
 ## Introduction
 
-LIRI is like Apple's SIRI, but instead of Speech Interpretation and Recognition Interface, LIRI is a Language Interpreation and Recognition Interface. In other words, LIRI works when users enter text commands via terminal. With LIRI, you can: 
+LIRI is node.js application that works kind of like like Apple's SIRI. Instead of Speech Interpretation and Recognition Interface, LIRI is a Language Interpreation and Recognition Interface. In other words, LIRI works when users enter text commands via terminal. With LIRI, you can: 
 
 * Search for upcoming concerts for an artist
 * Find a song on spotify
 * Find information about a movie
-* Just for fun–run a secret command
+* Run a  command with surprise results
 
 Read this document to learn how to start using LIRI. 
 
@@ -56,9 +56,11 @@ LIRI has 4 commands:
 1. **do-what-it-says**: Retrieves information from a text file. Run it and see what happens!
 
 To run a command in LIRI: 
+
+1. Open the liri-node-app repository in your code editor.
 1. Check that you are in the root of the directory.  You can use `ls` to see the files in your current directory. You should see one called liri.js. 
-2. If you don't see the liri.js file, `cd` to the appropriate directory.
-3. To run a command, use the following syntax: 
+1. If you don't see the liri.js file, `cd` to the appropriate directory.
+1. To run a command, use the following syntax: 
     
     * `node liri.js <LIRI Command> <search-input>`
     
