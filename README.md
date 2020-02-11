@@ -56,7 +56,7 @@ LIRI has 4 commands:
 
 To run a command in LIRI: 
 
-1. Open the liri-node-app repository in your code editor.
+1. Open Terminal and navigate to the liri-node-app directory.
 1. Check that you are in the root of the directory.  You can use `ls` to see the files in your current directory. You should see one called liri.js. 
 1. If you don't see the liri.js file, `cd` to the appropriate directory.
 1. To run a command, use the following syntax: 
