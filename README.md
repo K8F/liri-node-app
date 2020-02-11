@@ -2,7 +2,7 @@
 
 ## Introduction
 
-LIRI is like iPhones SIRI, but instead of Speech Interpretation and Recognition Interface, LIRI is a Language Interpreation and Recognition Interface. In other words, LIRI works when users enter text commands via terminal. With LIRI, you can: 
+LIRI is like Apple's SIRI, but instead of Speech Interpretation and Recognition Interface, LIRI is a Language Interpreation and Recognition Interface. In other words, LIRI works when users enter text commands via terminal. With LIRI, you can: 
 
 * Search for upcoming concerts for an artist
 * Find a song on spotify
