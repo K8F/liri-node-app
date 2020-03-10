@@ -67,28 +67,28 @@ Try it out by running the `concert-this` command to see upcoming concerts for Li
 
     `node liri.js concert-this lizzo`
 
-![concert-this](gifs/concert-this.gif)
+![concert-this](gifs/concert-this-new.gif)
 
  
 Now try the `spotify-this-song` command to retrieve information on Paramore's song, "Misery Business":
 
     `node liri.js spotify-this-song misery business`
     
-![spotify-this-song](gifs/spotify-this-song.gif)
+![spotify-this-song](gifs/spotify-this-song-new.gif)
 
     
 Next, try `movie-this` to get info on the movie, *The Lobster*: 
 
-    `node liri.js movie this the lobster`
+    `node liri.js movie-this the lobster`
 
-![movie-this](gifs/movie-this.gif)
+![movie-this](gifs/movie-this-new.gif)
 
 
 Finally, see what happens when you run `do-what-it-says`:
 
     `node liri.js do-what-it-says`
 
-![do-what-it-says](gifs/do-what-it-says.gif)
+![do-what-it-says](gifs/do-what-it-says-new.gif)
 
 Now try out the commands for yourself. Remember to use the correct search input for each command: 
 
@@ -101,9 +101,9 @@ Now try out the commands for yourself. Remember to use the correct search input 
 
 This assignment asked for placeholders for both the `movie-this` and the `spotify-this-song` commands. These gifs demonstrate what happens when a user does not include a search input with these commands. 
 
-![spotify-empty](gifs/spotify-empty.gif)
+![spotify-empty](gifs/spotify-empty-new.gif)
 
-![movie-empty](gifs/movie-empty.gif)
+![movie-empty](gifs/movie-empty-new.gif)
 
 
 
